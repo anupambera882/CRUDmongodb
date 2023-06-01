@@ -1,0 +1,17 @@
+<%- include('includes/header.ejs') %>
+
+    <div class="container mb-3">
+        <form action="/update/<%=data._id%>" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="title" value="<%=data.title%>">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">text</label>
+                <input class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" value="<%=data.content%>"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+    <%- include('includes/footer.ejs') %>
